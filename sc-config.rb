@@ -74,6 +74,9 @@ end
 # talk to backend services.
 
 # This will proxy all requests to /* -> http://www.twitter.com/*
-proxy '/', :to => 'www.twitter.com', :cookie_domain => '.twitter.com'
+#proxy '/', :to => 'www.twitter.com', :cookie_domain => '.twitter.com'
+
+# This will proxy all requests to /services/* to http://api.flickr.com/services/*
+proxy '/services', :to => 'api.flickr.com', :cookie_domain => 'api.flickr.com'
 
 
