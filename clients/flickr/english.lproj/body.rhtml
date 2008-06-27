@@ -1,0 +1,8 @@
+<% content_for('body') do %>
+<div class="sc-welcome">
+  <img class="logo" src="<%= static_url('images/sproutcore-logo') %>" />
+  <div class="message">
+    <%= button_view :toggle_button, :title => 'refresh', :action => 'Flickr.serverController.refresh' %>
+  </div>
+</div>
+<% end %>
